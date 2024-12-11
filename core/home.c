@@ -1,6 +1,7 @@
 #include "common.h"
 #include "utils.c"
 #include "fileopt.c"
+#include "generate.c"
 
 void main_menu();
 extern void solveSudoku(void){
@@ -32,32 +33,36 @@ extern void writeSudoku();
 
 void main(){
     main_menu();
-    return;
 }
 
 void main_menu(){
         {
+        printf("\n=========================================================\n");
+        printf("\n++++++++++++++");
         printf("\nSudoku Utility");
-        printf("\n________________");
+        printf("\n++++++++++++++\n");
 
-        printf("\n<File Options>\n");
+
+        printf("\n________________");
+        printf("\n<File Options>");
         printf("\n[ a. Display sudoku ]");
         printf("\t[ b. Print sudoku to file ]");
-        printf("\t[ c. Read sudoku from file ]\n");
-
-        printf("\n________________");
-
-        printf("\n==================================================\n");
+        printf("\t[ c. Read sudoku from file ]");
+        printf("\n________________\n");
 
         printf("\n________________");
         printf("\n<Utilities>");
         printf("\n1. Generate new sudoku [9x9]");
         printf("\n2. Solve loaded sudoku");
         printf("\n3. Check sudoku valid");
-        printf("\n4. Check board valid\n");
-        printf("\n________________");
+        printf("\n4. Check board valid");
+        printf("\n________________\n");
 
+        printf("\n~~~~~~~~~~~");
         printf("\n{e _> Exit}\n");
+        printf("~~~~~~~~~~~\n");
+
+        printf("\n=========================================================\n");
 
         char opt;
         scanf("%c",&opt);
@@ -89,7 +94,7 @@ void main_menu(){
                 exit(0);
                 break;
             default:
-                printf("==================================================");
+                printf("=========================================================");
         } 
         main();
     }
