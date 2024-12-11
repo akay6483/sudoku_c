@@ -117,7 +117,7 @@ extern void generateSudoku(){
     return;
 }
 
-extern void createSudokuPuzzle(){
+extern void makeSudokuPuzzle(){
     printf("Enter no of digits to remove: ");
     int nos;
     scanf("%d",&nos);

@@ -5,30 +5,13 @@
 #include "generate.c"
 
 
-extern void checkSudokuValid(void){
-    printf("testing sudoku valid");
-    return;
-}
+
 extern void checkBoardValid(void){
     printf("Blank space");
     return;
 }
 
-extern void generateSudoku();
 
-extern void clearSudoku();
-
-extern void trySolveSudoku();
-
-extern void checkBoardValid(void);
-
-extern void checkSudokuValid(void);
-
-extern void displaySudoku();
-
-extern void readSudoku();
-
-extern void writeSudoku();
 
 void control();
 void menu();
@@ -39,35 +22,35 @@ void control(){
 
 void menu(){
         {
-        printf("\n=========================================================\n");
-        printf("\n++++++++++++++");
-        printf("\nSudoku Utility");
-        printf("\n++++++++++++++\n");
+        printf("\n================================================================================================================\n");
+        printf("\n\t\t\t\t\t+++++++++++++++++++");
+        printf("\n\t\t\t\t\t+ Sudoku Utility  +");
+        printf("\n\t\t\t\t\t+++++++++++++++++++\n");
 
 
-        printf("\n________________");
+        printf("\n________________________________________________________________________________________________________________");
         printf("\n<File Options>");
         printf("\n[ a. Display sudoku ]");
         printf("\t[ b. Print sudoku to file ]");
         printf("\t[ c. Read sudoku from file ]");
         printf("\t[ d. Clear sudoku ]");
-        printf("\n________________\n");
+        printf("\n________________________________________________________________________________________________________________\n");
 
-        printf("\n________________");
+        printf("\n________________________________________________________________________________________________________________");
         printf("\n<Utilities>");
-        printf("\n0. Set grid size");
-        printf("\n1. Generate new sudoku [9x9]");
-        printf("\n2. Create sudoku puzzle");
-        printf("\n3. Solve loaded sudoku");
-        printf("\n4. Check sudoku valid");
-        printf("\n5. Check board valid");
-        printf("\n________________\n");
+        printf("\n[ 0. Set grid size");
+        printf("\n[ 1. Generate new sudoku");
+        printf("\n[ 2. Make sudoku into puzzle");
+        printf("\n[ 3. Solve loaded sudoku");
+        printf("\n[ 4. Check sudoku valid");
+        printf("\n[ 5. Check board valid");
+        printf("\n________________________________________________________________________________________________________________\n");
 
         printf("\n~~~~~~~~~~~");
         printf("\n{e _> Exit}\n");
         printf("~~~~~~~~~~~\n");
 
-        printf("\n=========================================================\n");
+        printf("\n================================================================================================================\n");
 
         char opt;
         scanf("%c",&opt);
@@ -79,7 +62,7 @@ void menu(){
                 generateSudoku();
                 break;
             case '2':
-                createSudokuPuzzle();
+                makeSudokuPuzzle();
                 break;
             case '3':
                 trySolveSudoku();

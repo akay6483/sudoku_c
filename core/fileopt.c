@@ -16,11 +16,15 @@ extern void clearSudoku(){
 }
 extern void displaySudoku(){
     printf("\n________________\n");
-    printf("Current Sudoku :");
+    printf("[ Current Sudoku ]");
     printf("\n________________\n");
     for(int i = 0; i<N; i++){
-        printf("\n  ____  ____  ____  ____  ____  ____  ____  ____  ____\n");
-        for(int j=0;j<N;j++)
+        printf("\n");
+        for(int k = 0; k<N; k++){
+            printf(" ____ ");
+        }
+        printf("\n");
+        for(int j=0; j<N; j++)
             printf("|  %d  ",sudomat[i][j]);
         printf("|");
     }

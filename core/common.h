@@ -13,6 +13,8 @@ extern void clearSudoku();
 
 extern void generateSudoku();
 
+extern void makeSudokuPuzzle();
+
 extern void trySolveSudoku();
 
 extern void checkBoardValid();
