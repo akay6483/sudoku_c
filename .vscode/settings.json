@@ -1,5 +1,6 @@
 {
     "files.associations": {
         "checkSudokuValid.C": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "enabled"
 }

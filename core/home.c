@@ -3,6 +3,18 @@
 #include "fileopt.c"
 
 void main_menu();
+extern void solveSudoku(void){
+    printf("Solved sudoku twice!");
+    return;
+}
+extern void checkSudokuValid(void){
+    printf("testing sudoku valid");
+    return;
+}
+extern void checkBoardValid(void){
+    printf("Blank space");
+    return;
+}
 
 extern void generateSudoku(void);
 

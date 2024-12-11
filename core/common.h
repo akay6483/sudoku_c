@@ -2,7 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
+#include <stdbool.h>
 
+int sudomat[20][20];
+int N,K,SRN;
 
 extern void generateSudoku(void);
 
