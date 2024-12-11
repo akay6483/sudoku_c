@@ -1,7 +1,21 @@
 #include "common.h"
 
+extern void setSudoku(){
+    printf("Grid size : ");
+    scanf("%d",&N);
+    //N = 9;
+    float SRNd = sqrt(N);
+    SRN = (int)SRNd;
+}
+extern void clearSudoku(){
+    for(int i = 0; i<N; i++){
+        for(int j = 0; j<N; j++){
+            sudomat[i][j] = 0;
+        }
+    }
+}
 extern void displaySudoku(){
-    printf("________________\n");
+    printf("\n________________\n");
     printf("Current Sudoku :");
     printf("\n________________\n");
     for(int i = 0; i<N; i++){
@@ -10,6 +24,7 @@ extern void displaySudoku(){
             printf("|  %d  ",sudomat[i][j]);
         printf("|");
     }
+    printf("\n");
 }
 
 extern void readSudoku(){

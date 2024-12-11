@@ -1,13 +1,10 @@
 #include "common.h"
-#include "utils.c"
+#include "solve.c"
+#include "checkvalid.c"
 #include "fileopt.c"
 #include "generate.c"
 
-void main_menu();
-extern void solveSudoku(void){
-    printf("Solved sudoku twice!");
-    return;
-}
+
 extern void checkSudokuValid(void){
     printf("testing sudoku valid");
     return;
@@ -17,9 +14,11 @@ extern void checkBoardValid(void){
     return;
 }
 
-extern void generateSudoku(void);
+extern void generateSudoku();
 
-extern void solveSudoku(void);
+extern void clearSudoku();
+
+extern void trySolveSudoku();
 
 extern void checkBoardValid(void);
 
@@ -31,11 +30,14 @@ extern void readSudoku();
 
 extern void writeSudoku();
 
-void main(){
-    main_menu();
+void control();
+void menu();
+
+void control(){
+    menu();
 }
 
-void main_menu(){
+void menu(){
         {
         printf("\n=========================================================\n");
         printf("\n++++++++++++++");
@@ -48,14 +50,17 @@ void main_menu(){
         printf("\n[ a. Display sudoku ]");
         printf("\t[ b. Print sudoku to file ]");
         printf("\t[ c. Read sudoku from file ]");
+        printf("\t[ d. Clear sudoku ]");
         printf("\n________________\n");
 
         printf("\n________________");
         printf("\n<Utilities>");
+        printf("\n0. Set grid size");
         printf("\n1. Generate new sudoku [9x9]");
-        printf("\n2. Solve loaded sudoku");
-        printf("\n3. Check sudoku valid");
-        printf("\n4. Check board valid");
+        printf("\n2. Create sudoku puzzle");
+        printf("\n3. Solve loaded sudoku");
+        printf("\n4. Check sudoku valid");
+        printf("\n5. Check board valid");
         printf("\n________________\n");
 
         printf("\n~~~~~~~~~~~");
@@ -67,16 +72,22 @@ void main_menu(){
         char opt;
         scanf("%c",&opt);
         switch(opt){
+            case '0':
+                setSudoku();
+                break;
             case '1':
                 generateSudoku();
                 break;
             case '2':
-                solveSudoku();
+                createSudokuPuzzle();
                 break;
             case '3':
-                checkSudokuValid();
+                trySolveSudoku();
                 break;
             case '4':
+                checkSudokuValid();
+                break;
+            case '5':
                 checkBoardValid();
                 break;
 
@@ -89,13 +100,20 @@ void main_menu(){
             case 'c':
                 writeSudoku();
                 break;   
+            case 'd':
+                clearSudoku();
+                break;
 
             case 'e':
                 exit(0);
                 break;
             default:
-                printf("=========================================================");
+                printf("Program restarting.....");
         } 
-        main();
+        control();
     }
+}
+
+void main(){
+    control();
 }

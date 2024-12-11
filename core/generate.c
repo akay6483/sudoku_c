@@ -82,20 +82,47 @@ bool fillRemaining(int i, int j){
 }
 
 
+
 void fillValues(){
     fillDiagonal();
-
     fillRemaining(0, SRN);
-
-    //removeKDigits();
 }
 
-extern void generateSudoku(void){
-    N = 9;
-    float SRNd = sqrt(N);
-    SRN = (int)SRNd;
+
+
+void removeValues(int k){
+    int count = k;
+    while(count != 0){
+        int cellId = rand() % (N*N-1+1) + 1 -1;
+        //printf("%d\t",cellId);
+        //printf("%f\t",cellId/N);
+        //printf("%f\t",cellId%N);
+
+        int i = (cellId/N);
+        int j = (cellId%N);
+
+        if(sudomat[i][j] != 0){
+            count--;
+            sudomat[i][j] = 0;
+        }
+    }
+}
+
+extern void generateSudoku(){
+    clearSudoku();
     fillValues();
     
     printf("\nSudoku generated successfully!");
+    displaySudoku();
     return;
+}
+
+extern void createSudokuPuzzle(){
+    printf("Enter no of digits to remove: ");
+    int nos;
+    scanf("%d",&nos);
+    removeValues(nos);
+
+    printf("\nSudoku puzzle created successfully!");
+    displaySudoku();
 }

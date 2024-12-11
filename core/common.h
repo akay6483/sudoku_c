@@ -4,16 +4,20 @@
 #include <math.h>
 #include <stdbool.h>
 
-int sudomat[20][20];
+int sudomat[30][30];
 int N,K,SRN;
 
-extern void generateSudoku(void);
+extern void setSudoku();
 
-extern void solveSudoku(void);
+extern void clearSudoku();
 
-extern void checkBoardValid(void);
+extern void generateSudoku();
 
-extern void checkSudokuValid(void);
+extern void trySolveSudoku();
+
+extern void checkBoardValid();
+
+extern void checkSudokuValid();
 
 extern void displaySudoku();
 
