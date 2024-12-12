@@ -23,7 +23,7 @@ void menu(){
         printf("\n<File Options>");
         printf("\n[ a. Display sudoku ]");
         printf("\t[ b. Print sudoku to file ]");
-        printf("\t[ c. Read sudoku from file ]");
+        printf("\t[ c. Open sudoku from file ]");
         printf("\t[ d. Clear sudoku ]");
         printf("\n________________________________________________________________________________________________________________\n");
 
@@ -31,7 +31,7 @@ void menu(){
         printf("\n<Utilities>");
         printf("\n[ 0. Set grid size");
         printf("\n[ 1. Generate new sudoku");
-        printf("\n[ 2. Make sudoku into puzzle");
+        printf("\n[ 2. Convert solved into puzzle");
         printf("\n[ 3. Solve loaded sudoku");
         printf("\n[ 4. Check sudoku valid");
         printf("\n[ 5. Check board valid");
@@ -69,10 +69,10 @@ void menu(){
                 displaySudoku();
                 break;
             case 'b':
-                readSudoku();
+                writeSudoku();
                 break;
             case 'c':
-                writeSudoku();
+                readSudoku();
                 break;   
             case 'd':
                 clearSudoku();

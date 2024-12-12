@@ -1,9 +1,3 @@
-*.exe
-*.gch
-#trying to ignore temps
-core/*.exe
-core/*.gch
-
 # Prerequisites
 *.d
 

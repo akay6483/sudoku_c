@@ -13,7 +13,7 @@ void fillBox(int row,int col){
     for(int i=0; i<SRN; i++){
         for(int j=0; j<SRN; j++){
             do{
-                num = rand() % (9-1+1) + 1;
+                num = rand() % (N-1+1) + 1;
             }while(!unUsedInBox(row, col, num));
             sudomat[row+i][col+j] = num;
         }
