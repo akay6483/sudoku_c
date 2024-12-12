@@ -14,10 +14,12 @@ extern void clearSudoku(){
         }
     }
 }
-extern void displaySudoku(){
-    printf("\n________________\n");
+
+extern void displaySudoku()
+{
+    printf("\n ________________\n");
     printf("[ Current Sudoku ]");
-    printf("\n________________\n");
+    printf("\n ________________\n");
     for(int i = 0; i<N; i++){
         printf("\n");
         for(int k = 0; k<N; k++){

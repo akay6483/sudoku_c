@@ -4,15 +4,6 @@
 #include "fileopt.c"
 #include "generate.c"
 
-
-
-extern void checkBoardValid(void){
-    printf("Blank space");
-    return;
-}
-
-
-
 void control();
 void menu();
 
